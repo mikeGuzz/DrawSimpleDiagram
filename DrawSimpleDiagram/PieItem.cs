@@ -32,7 +32,7 @@ namespace DrawSimpleDiagram
 
         public override string ToString()
         {
-            return $"{Name} - {Count}";
+            return $"{Name} = {Count}";
         }
     }
 }

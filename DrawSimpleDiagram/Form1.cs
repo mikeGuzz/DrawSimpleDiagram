@@ -84,6 +84,8 @@ namespace DrawSimpleDiagram
             }
 
             label1.Text = $"Total: {sum}";
+
+            t.Dispose();
         }
 
         private void add_button_Click(object sender, EventArgs e)
@@ -133,7 +135,10 @@ namespace DrawSimpleDiagram
 
         private void remove_button_Click(object sender, EventArgs e)
         {
-
+            if (listBox1.SelectedItems.Count != 1)
+                return;
+            listBox1.Items.RemoveAt(listBox1.SelectedIndex);
+            pictureBox1.Invalidate();
         }
     }
 }
